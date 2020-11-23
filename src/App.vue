@@ -1,28 +1,46 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" title="Hello, World!">
+    <NameText class="NameText" my-name="Tomilov Fedor"/>
+    <JinguLogo class="JinguLogo"/>
+    <Emoji class="Emoji"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NameText from "@/components/NameText";
+import JinguLogo from "@/components/JinguLogo";
+import Emoji from "@/components/Emoji";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Emoji,
+    JinguLogo,
+    NameText
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.JinguLogo {
+  display: inline-block;
+  text-align: end;
+  margin-left: 50px;
+  padding: 0;
+  margin-bottom: 0;
+}
+.NameText {
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+.Emoji {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0px;
 }
 </style>
